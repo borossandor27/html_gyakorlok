@@ -1,0 +1,37 @@
+.telepules-grid-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+    gap: 10px;
+    /* Térköz a cellák között */
+    width: 90vw;
+    /* Konténer szélessége */
+    margin: 20px auto;
+    /* Középre igazítás */
+}
+
+.telepules-kep-left {
+    grid-template-areas: "kep leiras leiras";
+}
+
+.telepules-kep-right {
+    grid-template-areas: "leiras leiras kep";
+}
+
+.grid-item {
+    background-color: aqua;
+}
+
+.leiras {
+    grid-area: leiras;
+
+}
+
+.kep {
+    grid-area: kep;
+
+}

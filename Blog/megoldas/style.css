@@ -1,0 +1,109 @@
+body
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        'menu main main main main right';
+    gap: 10px;
+    background-color: white;
+    padding: 1rem;
+    font-size: larger;
+}
+
+header {
+    background-color: purple;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header h1 {
+    padding-bottom: 15px;
+}
+
+footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+aside.ads {
+    grid-area: right;
+    border: 2px solid #0099cc;
+    background-color: #f5f5f5;
+    padding: 15px;
+    color: #000000;
+}
+
+aside.sidebar>div {
+    grid-area: menu;
+}
+
+aside.sidebar>div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside.sidebar>div li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+
+aside.sidebar>div li:hover {
+    background-color: purple;
+}
+
+section.content {
+    grid-area: main;
+    margin: .2vh 2vw;
+}
+
+article {
+    margin: 1vw;
+    padding: 1vw;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+article h2 {
+    color: navy;
+}
+article a{
+    text-decoration: none;
+}
+article a:hover {
+    color: red;
+}
+article p {
+    margin: .5rem;
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            'menu'
+            'main';
+        gap: 10px;
+        background-color: white;
+        padding: 1rem;
+        font-size: larger;
+    }
+    aside.ads {
+        display: none;
+    }
+    .content {
+        width: 100%;
+        min-width: auto;
+    }
+}
